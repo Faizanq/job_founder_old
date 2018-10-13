@@ -19,7 +19,26 @@ use Illuminate\Http\Request;
 */
 Route::apiResource('languages','API\Language\LanguageController',['only'=>['index']]);
 
+/*
+* Resons
+*/
 Route::apiResource('reasons','API\Reason\ReasonController',['only'=>['index']]);
+
+/*
+* Reports
+*/
+Route::apiResource('reports','API\Report\ReportController',['only'=>['index']]);
+
+/*
+* Category
+*/
+Route::apiResource('categories','API\Category\CategoryController',['only'=>['index']]);
+
+
+/*
+*  Position
+*/
+Route::apiResource('positions','API\Position\PositionController',['only'=>['index']]);
 
 
 

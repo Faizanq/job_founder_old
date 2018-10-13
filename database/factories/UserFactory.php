@@ -1,7 +1,10 @@
 <?php
 
+use App\Models\Category;
 use App\Models\Language;
+use App\Models\Position;
 use App\Models\Reason;
+use App\Models\Report;
 use Faker\Generator as Faker;
 
 /*
@@ -26,6 +29,26 @@ $factory->define(Language::class, function (Faker $faker) {
 $factory->define(Reason::class, function (Faker $faker) {
     return [
         'reason' => $faker->paragraph(1),
+    ];
+});
+
+$factory->define(Report::class, function (Faker $faker) {
+    return [
+        'reason' => $faker->paragraph(1),
+        'image' =>'http://lorempixel.com/100/100/',
+    ];
+});
+
+$factory->define(Position::class, function (Faker $faker) {
+    return [
+        'position' => $faker->word,
+    ];
+});
+
+$factory->define(Category::class, function (Faker $faker) {
+    return [
+        'name' => $faker->word,
+        'image' =>'http://lorempixel.com/100/100/',
     ];
 });
 
