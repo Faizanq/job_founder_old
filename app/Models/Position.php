@@ -5,20 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Language extends Model
+class Position extends Model
 {
     use SoftDeletes;
 
     protected $fillable =[
-    		'language_code',
-    		'language_name',
+    		'postion',
     ];
 
     protected $hidden = ['deleted_at'];
 
     protected $dates = ['deleted_at'];
 
-    public function getLanguageNameAttribute($name){
+    public function getTitleAttribute($name){
         return ucwords($name);
     }
 }
