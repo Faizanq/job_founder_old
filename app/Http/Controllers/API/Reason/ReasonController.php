@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\API\Language;
+namespace App\Http\Controllers\API\Reason;
 
 use App\Http\Controllers\API\Base\ApiController;
 use App\Http\Controllers\Controller;
-use App\Models\Language;
+use App\Models\Reason;
 use Illuminate\Http\Request;
 
-class LanguageController extends ApiController
+class ReasonController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class LanguageController extends ApiController
     
     public function index()
     {
-        $languages = Language::all();
-        return $this->showAll($languages);
+        $reasons = Reason::all();
+        return $this->showAll($reasons);
     }
 
 }

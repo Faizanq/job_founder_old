@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Language;
+use App\Models\Reason;
 use Faker\Generator as Faker;
 
 /*
@@ -19,6 +20,12 @@ $factory->define(Language::class, function (Faker $faker) {
     return [
         'language_code' => str_random(2),
         'language_name' => $faker->word,
+    ];
+});
+
+$factory->define(Reason::class, function (Faker $faker) {
+    return [
+        'reason' => $faker->paragraph(1),
     ];
 });
 

@@ -32,11 +32,11 @@ trait ApiResponser
 	}
 
 	protected function showAll(Collection $collection,$code=200){
-		$this->SuccessResponse($collection,'',$code);
+		return $this->SuccessResponse($collection,'',$code);
 	}
 
 	protected function showOne(Model $model,$code=200){
-		$this->SuccessResponse($model,'',$code);
+		return $this->SuccessResponse($model,'',$code);
 	}
 }
 ?>

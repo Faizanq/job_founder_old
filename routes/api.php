@@ -19,6 +19,8 @@ use Illuminate\Http\Request;
 */
 Route::apiResource('languages','API\Language\LanguageController',['only'=>['index']]);
 
+Route::apiResource('reasons','API\Reason\ReasonController',['only'=>['index']]);
+
 
 
 
