@@ -15,34 +15,10 @@ use Illuminate\Http\Request;
 
 
 /*
-* Buyer
+* Language
 */
-Route::apiResource('buyers','API\Buyer\BuyerController',['only'=>['index','show']]);
+Route::apiResource('languages','API\Language\LanguageController',['only'=>['index']]);
 
-/*
-* Seller
-*/
-Route::apiResource('sellers','API\Seller\SellerController',['only'=>['index','show']]);
-
-/*
-* Product
-*/
-Route::apiResource('products','API\Product\ProductController',['only'=>['index','show']]);
-
-/*
-* Category
-*/
-Route::apiResource('categories','API\Category\CategoryController',['except'=>['create','edit']]);
-
-/*
-* Transaction
-*/
-Route::apiResource('transactions','API\Transaction\TransactionController',['only'=>['index','show']]);
-
-/*
-* User
-*/
-Route::apiResource('users','API\User\UserController',['except'=>['create','edit']]);
 
 
 
