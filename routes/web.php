@@ -40,3 +40,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('verify/{email}/{token}','Auth\RegisterController@verifyUser')->name('verify');
+
+Route::get('/admin/login', 'Admin\DefaultController@login')->name('login');
+
+
